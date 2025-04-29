@@ -33,7 +33,7 @@
 
 
 
-        <button class="btn bnt-lg btn-primary bnt_block mt-3">sign up</button>
+        <button class="btn bnt-lg btn-primary bnt_block mt-3" type="submit" name="submit">sign up</button>
 
 
         <small>already have an account? <a href="main.php"> log in </a></small>
