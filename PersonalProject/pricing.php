@@ -22,12 +22,12 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="course.html">Courses</a></li>
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="pricing.html">Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="course.php">Courses</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="pricing.php">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="faq.php">FAQ</a></li>
                             <li class="nav-item d-flex align-items-center ms-3">
                                 <button id="darkModeToggle" class="btn btn-outline-light btn-sm">🌙 Dark Mode</button>
                                 </li>
@@ -73,7 +73,7 @@
                                      
                                         
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-outline-primary" href="pay.html">Choose plan</a></div>
+                                    <div class="d-grid"><a class="btn btn-outline-primary" href="pay.php">Choose plan</a></div>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +121,7 @@
                                         </li>
                                         
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-primary" href="pay.html">Choose plan</a></div>
+                                    <div class="d-grid"><a class="btn btn-primary" href="pay.php">Choose plan</a></div>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                                         </li>
                                        
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-outline-primary" href="pay.html">Choose plan</a></div>
+                                    <div class="d-grid"><a class="btn btn-outline-primary" href="pay.php">Choose plan</a></div>
                                 </div>
                             </div>
                         </div>

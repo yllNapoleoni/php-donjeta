@@ -115,7 +115,7 @@
       <button type="submit" class="pay-btn">Pay Now</button>
       <div class="success-message" id="successMessage">Payment Successful!</div>
     </form>
-    <button type="button" class="pay-btn" style="margin-top:16px;background:linear-gradient(90deg,#757575 0%,#bdbdbd 100%);" onclick="window.location.href='pricing.html'">Back</button>
+    <button type="button" class="pay-btn" style="margin-top:16px;background:linear-gradient(90deg,#757575 0%,#bdbdbd 100%);" onclick="window.location.href='pricing.php'">Back</button>
   </div>
   <script>
     document.getElementById('paymentForm').addEventListener('submit', function(e) {

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,11 +21,11 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><strong>SkillFocus</strong></a>
+                    <a class="navbar-brand" href="index.php"><strong>SkillFocus</strong></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="course.php">Courses</a></li>
@@ -31,9 +34,29 @@
                             <li class="nav-item"><a class="nav-link" href="faq.php">FAQ</a></li> 
                             <li class="nav-item d-flex align-items-center ms-3">
                                 <button id="darkModeToggle" class="btn btn-outline-light btn-sm">🌙 Dark Mode</button>
+                            </li>
+                            <?php if (isset($_SESSION['username'])): ?>
+                                <li class="nav-item ms-3 d-flex align-items-center">
+                                    <img src="<?php echo isset($_SESSION['profile_pic']) ? htmlspecialchars($_SESSION['profile_pic']) : 'img/default-profile.png'; ?>" alt="Profile" class="rounded-circle" style="width:36px;height:36px;object-fit:cover;margin-right:10px;">
+                                    <span class="text-white fw-semibold"><?php echo htmlspecialchars($_SESSION['username']); ?></span>
                                 </li>
-
-                            
+                                <li class="nav-item ms-2">
+                                    <a class="btn btn-outline-light btn-sm px-4 fw-semibold shadow-sm" href="logout.php">
+                                        <i class="bi bi-box-arrow-right me-1"></i> Logout
+                                    </a>
+                                </li>
+                            <?php else: ?>
+                                <li class="nav-item ms-2">
+                                    <a class="btn btn-light btn-sm me-2 px-4 fw-semibold shadow-sm" href="login.php">
+                                        <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-primary btn-sm px-4 fw-semibold shadow-sm" href="register.php">
+                                        <i class="bi bi-person-plus me-1"></i> Register
+                                    </a>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -44,11 +67,11 @@
                     <div class="row gx-5 align-items-center justify-content-center">
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-5 fw-bolder text-white mb-2">A website that helps you choose you next course with ease!</h1>
-                                <p class="lead fw-normal text-white-50 mb-4">Our website is recommended by a lot of up and coming programmersand students.</p>
+                                <h1 class="display-5 fw-bolder text-white mb-2">A website that helps you choose your next course with ease!</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">Our website is recommended by a lot of up and coming programmers and students.</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                     <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Get Started</a>
-                                    <a class="btn btn-outline-light btn-lg px-4" href="about.html">Learn More</a>
+                                    <a class="btn btn-outline-light btn-lg px-4" href="about.php">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +137,6 @@
                         <div class="col-lg-10 col-xl-7">
                             <div class="text-center">
                                 <div class="fs-4 mb-4 fst-italic">"Working with Skillfocus has made my life way easier, it is super simple yet so effective!"</div>
-                                
                             </div>
                         </div>
                     </div>
@@ -255,7 +277,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-       
-
     </body>
 </html>
